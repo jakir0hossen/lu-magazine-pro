@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --headings-font: "Handlee", cursive;
+  --primary-color: green;
+  --light-grey-color: rgb(243, 243, 243);
+  --dark-color: rgb(46, 46, 46);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+h1, h2, h3 {
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+body {
+  background-color: white;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: green; /* Changed background color to green */
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center navbar items horizontally */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  padding: 16px;
+  color: white; /* Changed text color to white for better contrast */
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background: darkgreen; /* Darker green for hover effect */
+  color: white;
+}
+
+.navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: green; /* Set dropdown background to green */
+  display: none;
+}
+
+.navbar ul li ul li {
+  border-top: 1px solid black;
+}
+
+.navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+.navbar ul li:hover > ul {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+}
+
+@media(max-width: 991px) {
+  .navbar ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li ul {
+    position: static;
+    width: 100%;
+  }
+
+  .navbar ul li ul li {
+    background: green; /* Match dropdown background color */
+  }
+
+  #menu-bar:checked ~ .navbar ul {
+    display: flex;
+  }
+
+  #menu-bar {
+    display: block;
+  }
+}
+
+
+
+
+
+footer {
+  background-color:#111;
+  color: white;
+  padding: 2rem 0;
+  margin-top: 50px;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  opacity: 0.9;
+}
+
+.socialIcons a:hover {
+  background-color: #111;
+  transition: 0.5s;
+}
+
+.socialIcons a:hover i {
+  color: white;
+  transition: 0.5s;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 20px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: 0.5s;
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0 5px;
+}
+
+@media (max-width: 700px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px;
+  }
+}
+
+/* Responsive Design Adjustments */
+
+@media (max-width: 1200px) {
+  .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .articles {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase .text-content h1 {
+    font-size: 1.2rem;
+  }
+
+  .showcase .text-content a {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}

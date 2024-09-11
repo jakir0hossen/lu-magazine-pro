@@ -1,0 +1,438 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Handlee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+:root {
+  --headings-font: "Handlee", cursive;
+  --primary-color: green;
+  --light-grey-color: rgb(243, 243, 243);
+  --dark-color: rgb(46, 46, 46);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+h1, h2, h3 {
+  font-family: "Quicksand", sans-serif;
+}
+
+.container {
+  max-width: 1100px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+body {
+  background-color: white;
+}
+
+img {
+  width: 100%;
+}
+
+/* Navbar */
+
+/* Navbar */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: green; /* Changed background color to green */
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center content horizontally */
+  padding: 10px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center; /* Center navbar items horizontally */
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+.navbar ul li {
+  position: relative;
+}
+
+.navbar ul li a {
+  font-size: 16px;
+  padding: 16px;
+  color: white; /* Changed text color to white for better contrast */
+  display: block;
+}
+
+.navbar ul li a:hover {
+  background: darkgreen; /* Darker green for hover effect */
+  color: white;
+}
+
+.navbar ul li ul {
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: green; /* Set dropdown background to green */
+  display: none;
+}
+
+.navbar ul li ul li {
+  border-top: 1px solid black;
+}
+
+.navbar ul li ul li ul {
+  left: 200px;
+  top: 0;
+}
+
+.navbar ul li:hover > ul {
+  display: block;
+}
+
+#menu-bar {
+  display: none;
+}
+
+@media(max-width: 991px) {
+  .navbar ul {
+    flex-direction: column;
+    display: none;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li ul {
+    position: static;
+    width: 100%;
+  }
+
+  .navbar ul li ul li {
+    background: green; /* Match dropdown background color */
+  }
+
+  #menu-bar:checked ~ .navbar ul {
+    display: flex;
+  }
+
+  #menu-bar {
+    display: block;
+  }
+}
+
+
+/* Featured Books */
+.featured_boks {
+  width: 100%;
+  padding: 70px 0;
+}
+
+.featured_boks h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 45px;
+  color: #333; /* Added color for consistency */
+}
+
+.featured_boks .featured_book_box {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 10px;
+  overflow-x: auto; /* Scrolling adjusted */
+}
+
+.featured_boks .featured_book_box .featured_book_card {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd; /* Softer border */
+  margin: 0 5px;
+  background: white;
+}
+
+.featured_boks .featured_book_box .featured_book_card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_img img {
+  width: 145px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag h2 {
+  margin: 8px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .writer {
+  color: #919191;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .categories {
+  color: green;
+  margin-top: 8px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price {
+  margin-top: 8px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .book_price sub {
+  font-weight: 100;
+  padding: 0 15px;
+}
+
+.featured_boks .featured_book_box .featured_book_card .featurde_book_tag .f_btn {
+  padding: 5px 30px;
+  border: 2px solid green;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Arrivals */
+.arrivals {
+  width: 100%;
+  padding: 70px 0;
+  background-color: white;
+}
+
+.arrivals h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 50px;
+  color: #333; /* Added color for consistency */
+}
+
+.arrivals .arrivals_box {
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 25px;
+}
+
+.arrivals .arrivals_box .arrivals_card {
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd; /* Softer border */
+  background: white;
+  transition: box-shadow 0.3s; /* Smooth transition */
+}
+
+.arrivals .arrivals_box .arrivals_card:hover {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image {
+  width: 150px;
+  height: 220px;
+  margin: 0 auto;
+  cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s; /* Smooth transition */
+}
+
+.arrivals .arrivals_box .arrivals_card:hover .arrivals_image img {
+  transform: scale(1.1);
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag p {
+  font-family: 'Handlee', cursive; /* Used a font from your imports */
+  font-size: 20px;
+  margin: 8px 0;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_icon {
+  color: green;
+  margin-bottom: 18px;
+}
+
+.arrivals .arrivals_box .arrivals_card .arrivals_tag .arrivals_btn {
+  padding: 8px 20px;
+  border: 2px solid green;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Reviews */
+.reviews {
+  width: 100%;
+  padding: 70px 0; /* Adjusted for consistency */
+  background-color: white;
+}
+
+.reviews h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 50px;
+  color: #333; /* Added color for consistency */
+}
+
+.reviews .review_box {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap; /* Responsive adjustment */
+  justify-content: center;
+}
+
+.reviews .review_box .review_card {
+  width: 400px;
+  margin: 15px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  padding: 15px;
+  background: white;
+  transition: box-shadow 0.3s; /* Smooth transition */
+}
+
+.reviews .review_box .review_card i {
+  float: right;
+  font-size: 120px;
+  color: #eaeaea;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+.reviews .review_box .review_card .card_top img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.reviews .review_box .review_card .card p {
+  margin: 10px 0;
+  text-align: justify;
+  line-height: 1.6; /* Consistent line height */
+}
+
+.reviews .review_box .review_card .card .review_icon i {
+  font-size: 16px;
+  float: left;
+  color: green;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #111;
+  color: white;
+}
+
+.footerContainer {
+  width: 100%;
+  padding: 70px 30px 20px;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.socialIcons a {
+  text-decoration: none;
+  padding: 10px;
+  background-color: white;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.socialIcons a i {
+  font-size: 2em;
+  color: black;
+  transition: color 0.5s; /* Smooth transition */
+}
+
+.socialIcons a:hover {
+  background-color: #111;
+}
+
+.socialIcons a:hover i {
+  color: white;
+}
+
+.footerNav {
+  margin: 30px 0;
+}
+
+.footerNav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.footerNav ul li a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.3em;
+  opacity: 0.7;
+  transition: opacity 0.5s; /* Smooth transition */
+}
+
+.footerNav ul li a:hover {
+  opacity: 1;
+}
+
+.footerBottom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+.footerBottom p {
+  color: white;
+}
+
+.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0 5px;
+}
+
+@media (max-width: 700px) {
+  .footerNav ul {
+    flex-direction: column;
+  }
+  .footerNav ul li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
+}
