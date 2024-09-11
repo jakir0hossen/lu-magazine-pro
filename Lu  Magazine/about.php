@@ -25,7 +25,6 @@
                      <ul>
                         <li><a href="./blog.php">Blogs</a></li>
                         <li><a href="./books.php">Book</a></li>
-                   
                         <li><a href="./index.php">Event</a></li>
                         <li><a href="#">Lu Club</a>
                             <ul>
@@ -52,7 +51,7 @@
                     </li>
                     <li><a href="./contact.php">Contact</a></li>
                     <li><a href="./register.php">Sign Up</a></li>
-                    <li><a href="./login.php"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
+                    <li><a href="./logout.php"><i class="fa-solid fa-right-to-bracket"></i>logout</a></li>
                 </ul>
                 
             </div>
@@ -133,7 +132,9 @@
 
        </div>
     </section>
- 
+
+
+
     <footer>
         <div class="footerContainer">
             <div class="socialIcons">
@@ -160,7 +161,5 @@
             <p>Copyright &copy;2024; Design by <span class="designer">LuMagazine</span></p>
         </div>
     </footer>
- 
 </body>
-
 </html>

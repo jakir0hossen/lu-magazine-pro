@@ -146,34 +146,6 @@ nav .container {
   }
 }
 
-
-
-
-
-
-
-.options a {
-  text-decoration: none;
-  padding: 3px 3px;
-  font-size: 16px;
-  font-weight: 500;
-  color: black;
-  letter-spacing: 2px;
-  float: left;
-  font-family: 'Roboto', Times, serif;
-  text-align: center;
-}
-
-.options a:hover {
-  background-color: black;
-  color: white !important;
-}
-
-.current {
-  background-color: green;
-  color: white !important;
-}
-
 .contact{
     position: relative;
     min-height: 100vh;
@@ -216,7 +188,7 @@ nav .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    
 }
 
 .container .contactInfo{
